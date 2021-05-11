@@ -1,5 +1,5 @@
 const config: IConfig = {
-  serve: `http://${window.location.hostname}:38080`,
+  serve: `http://vendor-rap2-delos`,
   keys: ['some secret hurr'],
   session: {
     key: 'koa:sess',
