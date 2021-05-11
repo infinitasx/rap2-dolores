@@ -1,5 +1,5 @@
 const config: IConfig = {
-  serve: `http://vendor-rap2-delos`,
+  serve: 'https://rap2-api.melbdelivery.com',
   keys: ['some secret hurr'],
   session: {
     key: 'koa:sess',
