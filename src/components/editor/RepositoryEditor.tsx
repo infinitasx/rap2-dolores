@@ -280,7 +280,7 @@ class RepositoryEditor extends Component<Props, States> {
           scrollToFirstStep={true}
           showProgress={true}
           showSkipButton={true}
-          run={this.state.guideOpen}
+          run={false}
           locale={{
             skip: '跳过',
             next: '下一步',
