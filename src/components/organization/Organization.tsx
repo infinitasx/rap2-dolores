@@ -8,7 +8,8 @@ import { useHandleDelete, useHandleExit, useHandleJoin } from './OrganizationLis
 import { Card } from '@material-ui/core'
 
 function avatar(user: any) {
-  return `https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`
+  // return `https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`
+  return `https://dummyimage.com/60x60/FFDA00/000&text=${user.email?.charAt('0').toUpperCase()}`
 }
 
 interface Props {
