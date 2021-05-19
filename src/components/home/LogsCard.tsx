@@ -13,11 +13,13 @@ import { Card } from '@material-ui/core'
 // 5. √ FromNow 应该提成组件
 const UserAvatar = ({ user }: any) => (
   user
-    ? <img alt={user.empId} src={`https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`} className="Log-avatar" />
+    // ? <img alt={user.empId} src={`https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`} className="Log-avatar" />
+    ? <img alt={user.empId} src={`https://dummyimage.com/60x60/FFDA00/000&text=${user.email?.charAt('0').toUpperCase()}`} className="Log-avatar" />
     : null
 )
 const UserLink = ({ user }: any) => (
-  <Link to={`https://work.alibaba-inc.com/work/u/${user.empId}`} target="_blank" className="Log-user-link">{user.fullname}</Link>
+  // <Link to={`https://work.alibaba-inc.com/work/u/${user.empId}`} target="_blank" className="Log-user-link">{user.fullname}</Link>
+  <Link to="#" className="Log-user-link">{user.fullname}</Link>
 )
 const LogUserView = ({ user }: any) => {
   return (
@@ -154,8 +156,10 @@ const ExitLogView = ({ log }: any) => {
 }
 
 export const Log = ({ log }: any) => {
-  const userAvatar = <img alt={log.user.empId} src={`https://work.alibaba-inc.com/photo/${log.user.empId}.220x220.jpg`} className="avatar" />
-  const userLink = <Link to={`https://work.alibaba-inc.com/work/u/${log.user.empId}`} target="_blank">{log.user.fullname}</Link>
+  // const userAvatar = <img alt={log.user.empId} src={`https://work.alibaba-inc.com/photo/${log.user.empId}.220x220.jpg`} className="avatar" />
+  const userAvatar = <img alt={log.user.empId} src={`https://dummyimage.com/60x60/FFDA00/000&text=${log.user.email?.charAt('0').toUpperCase()}`} className="avatar" />
+  // const userLink = <Link to={`https://work.alibaba-inc.com/work/u/${log.user.empId}`} target="_blank">{log.user.fullname}</Link>
+  const userLink = <Link to="#">{log.user.fullname}</Link>
   const fromNow = <i className="fromnow">{moment(log.updatedAt).fromNow()}</i>
   let targetName: any, targetLink: any, typeName: any
   if (log.organization) { // 团队
